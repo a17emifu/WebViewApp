@@ -1,5 +1,5 @@
 package com.example.brom.webviewapp;
-//Vad är "uppcheckad kod" på feedback? Jag gissar att det är komment och försöker fixa.
+//Vad är "uppcheckad kod" på feedback? Jag gissar att det är kommentar och försöker fixa.
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
