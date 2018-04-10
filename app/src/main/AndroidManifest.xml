@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.brom.webviewapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <!-- You need to include a statement here that allows this app to use the INTERNET -->
     <!-- Enter the code here -->
     <application
@@ -20,6 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AboutUs"></activity>
     </application>
 
 </manifest>
