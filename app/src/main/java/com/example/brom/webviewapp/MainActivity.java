@@ -1,5 +1,5 @@
 package com.example.brom.webviewapp;
-
+//Vad är "uppcheckad kod" på feedback? Jag gissar att det är komment och försöker fixa.
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,16 +14,17 @@ import android.webkit.WebViewClient;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    // Create a private member variable that can hold our WebView
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        /* This code is run when the App is created. Include code that creates your WebView */
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //För att visa WebView för extern webbsidor
         WebView myWebView = (WebView) findViewById(R.id.mywebview);
         myWebView.setWebViewClient(new WebViewClient());
         myWebView.loadUrl("https://www.google.com/");
@@ -32,19 +33,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        //boolean för menybar
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        //if-satser för att gå vidare till andra sidor: inställningar och "about us"
         if (id == R.id.action_settings) {
             return true;
         }

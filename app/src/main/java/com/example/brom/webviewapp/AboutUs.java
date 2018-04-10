@@ -16,26 +16,24 @@ public class AboutUs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-
+        //För att visa WebView för intern webbsidan
         WebView mysecondView = (WebView) findViewById(R.id.secondview);
         mysecondView.setWebViewClient(new WebViewClient());
         mysecondView.loadUrl("file:///android_asset/about.html");
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        //För menybar
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        //if-satser för att gå vidare till andra sidor: inställningar och "about us"
         if (id == R.id.action_settings) {
             return true;
         }
@@ -48,7 +46,7 @@ public class AboutUs extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+    //Man kan gå tillbaks till förra sidan genom att trycka på bakåt knappen
     public void onClick( View v_ )
     {
         finish();
